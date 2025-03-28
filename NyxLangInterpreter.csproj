@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>org.amimchik.NyxLangInterpreter</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Source/API/" />
+    <Folder Include="Source/Interpreter/AST/" />
+    <Folder Include="Source/Interpreter/Interpreter/" />
+    <Folder Include="Source/Interpreter/Visitor/" />
+  </ItemGroup>
+
+</Project>
