@@ -7,33 +7,28 @@ public class Runner
     public static void Main(string[] args)
     {
         Tokenizer lexer = new("""
-        class MyClass
+        def fact(let n: int): int
         {
-            pub def _init(let val: int)
-            {
-                myField = val
-            }
-            pub prop MyProperty: int { get { return myField } set { myField = _value } }
-            priv field myField: int
-
-            pub def printInfo(): void
-            {
-                printf("val: {}", val)
-            }
+            if (n == 0)
+                ret 1
+            else
+                ret n * fact(n - 1)
         }
 
-        let myClass: MyClass = new MyClass(4)
-        
-        myClass.printInfo()
+        def main(): void
+        {
+            let x: int = int(input("Enter a number: "))
+            printf("{}! = {}", x, fact(x))
+        }
 
-        myCLass.MyProperty = 5
-
-        myClass.printInfo()
+        if (_name == "main")
+            main()
         """);
         var tokens = lexer.Tokenize();
         foreach (var token in tokens)
         {
-            Console.WriteLine(token);
+            Console.Write($"[{token}]");
         }
+        Console.WriteLine();
     }
 }

@@ -7,6 +7,8 @@ public enum TokenType
     Def,    // def
     While,  // while
     For,    // for
+    If,     // if
+    Else,   // else
     Break,  // break
     Continue,// contiue
     Int,    // int

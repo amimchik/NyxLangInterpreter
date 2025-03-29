@@ -11,6 +11,8 @@ public class Tokenizer(string input)
     private readonly Dictionary<string, Token> keywords = new()
     {
         { "get", new(TokenType.Get, string.Empty) },
+        { "if", new(TokenType.If, string.Empty) },
+        { "else", new(TokenType.Else, string.Empty) },
         { "set", new(TokenType.Set, string.Empty) },
         { "prop", new(TokenType.Prop, string.Empty) },
         { "field", new(TokenType.Field, string.Empty) },
